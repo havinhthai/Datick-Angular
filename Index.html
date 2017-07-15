@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Datick</title>
+    <!-- Mobile First -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="css/index-style.css" type="text/css"/>
+    <!-- Font -->
+    <link rel="stylesheet" href="fonts/font-awesome-4.5.0/css/font-awesome.css" type="text/css"/>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:700&subset=vietnamese' rel='stylesheet' type='text/css'>
+</head>
+<body ng-app="myApp" ng-controller="myController">
+    <div id="btnSocial">
+        <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="box_count" data-action="like" data-size="small" data-show-faces="true" data-share="true" style="margin-bottom: 5px"></div>
+        <br/>
+        <div class="g-plusone" data-size="tall" data-annotation="inline" data-width="300"></div>
+    </div> <!-- end like share button -->
+
+    <header ng-include="'Header.html'">
+    </header> <!-- end header -->
+
+    <main style="margin-top: 23px">
+        <div class="container">
+            <div class="row">
+                <section class="col-sm-8">
+                    <!--<input type="search" role="search" id="inp-search" placeholder="Nhập nội dung cần tìm" ng-model="searchText" class="form-control"/>-->
+                    <div ng-include="'MainContent.html'"></div>
+                </section>
+
+                <aside class="col-sm-4">
+                    <div ng-include="'Aside.html'"></div>
+                </aside>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div ng-include="'Footer.html'"></div>
+    </footer>
+
+    <!-- angularJS -->
+    <script src="js/angular/angular.js"></script>
+
+    <!--jQuery and BS core JS-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!--<script src="js/parallax.js"></script>-->
+
+
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.7&appId=982587791830729";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script> <!-- end Facebook button -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.7&appId=982587791830729";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script> <!-- end fanpage plugin -->
+    <script src="https://apis.google.com/js/platform.js" async defer>{lang: 'vi'}</script> <!-- end G+ button -->
+
+
+    <script>
+        var app = angular.module("myApp", []);
+        app.controller("myController", function($scope, $rootScope) {
+            $scope.searchText = '';
+        });
+        app.controller("room4Rent", function($scope) {
+
+
+            var motelRooms = [];
+
+            motelRooms.push({
+                title:"Cho thuê phòng trọ số 80 Núi Thành",
+                acreage:"35",
+                area:"Hải Châu",
+                piece:"2.2",
+                dateUp:new Date('7/24/2016'),
+                imgUrl:"Images/phongtro.png"
+            });
+            motelRooms.push({title:"Cho thuê phòng trọ kiệt 11/9 đường Đỗ Quang",
+                acreage:"25",
+                area:"Thanh Khê",
+                piece:"1.5",
+                dateUp:new Date('7/23/2016'),
+                imgUrl:"Images/phongtro.png"
+            });
+            motelRooms.push({
+                title:"Cho thuê phòng trọ đầy đủ tiện nghi: tivi, tủ lạnh, điều hòa, quạt",
+                acreage:"40",
+                area:"Sơn Trà",
+                piece:"3.5",
+                dateUp:new Date('7/23/2016'),
+                imgUrl:"Images/phongtro.png"
+            });
+            motelRooms.push({
+                title:"Cho gia đình thuê phòng trọ tại số nhà 80 Núi Thành!",
+                acreage:"20",
+                area:"Hải Châu",
+                piece:"2.2",
+                dateUp:new Date('7/22/2016'),
+                imgUrl:"Images/phongtro.png"
+            });
+
+            $scope.motelRooms = motelRooms;
+        });
+
+
+        app.controller("house4Rent", function($scope) {
+            var housesRent = [];
+            housesRent.push({
+                title:"Nhà kiệt Hoàng Diệu 3PN có nội thất cơ bản chỉ 5 triệu",
+                acreage:"140",
+                area:"Hải Châu",
+                piece:"5",
+                dateUp:new Date('7/25/2016'),
+                imgUrl:"Images/phongtro.png"
+            });
+            housesRent.push({
+                title:"Nhà 3 tầng tuyệt đẹp gần biển Phạm Văn Đồng",
+                acreage:"100",
+                area:"Sơn Trà",
+                piece:"15",
+                dateUp:new Date('7/25/2016'),
+                imgUrl:"Images/phongtro.png"
+            });
+            housesRent.push({
+                title:"Nhà 3 tầng đường Phạm Nhữ Tăng giá chỉ 8 triệu",
+                acreage:"40",
+                area:"Thanh Khê",
+                piece:"8",
+                dateUp:new Date('7/24/2016'),
+                imgUrl:"Images/phongtro.png"
+            });
+
+            $scope.housesRent = housesRent;
+        });
+
+
+        app.controller("apartment4Rent", function($scope) {
+            var apartmentsRent = [];
+            apartmentsRent.push({
+                title:"TÔI CÓ 2 CĂN HỘ HAGL 3 PN, NỘI THẤT MỚI 100% CẦN CHO THUÊ GẤP, NHẬN NHÀ NGAY. LH 9350.00.869",
+                acreage:"110",
+                area:"Thanh Khê",
+                piece:"12",
+                dateUp:new Date('7/25/2016'),
+                imgUrl:"Images/phongtro.png"
+            });
+            apartmentsRent.push({
+                title:"Cho thuê CHCC ngắn và dài ngày đầy đủ tiện nghi, 2,3PN, ở 4-6 người vẫn rẻ hơn khách sạn cao cấp",
+                acreage:"110",
+                area:"Thanh Khê",
+                piece:"17",
+                dateUp:new Date('7/23/2016'),
+                imgUrl:"Images/phongtro.png"
+            });
+            apartmentsRent.push({
+                title:"Căn Hộ Hoàng Anh Gia Lai 3 Phòng Ngủ",
+                acreage:"117",
+                area:"Ngũ Hành Sơn",
+                piece:"11",
+                dateUp:new Date('7/24/2016'),
+                imgUrl:"Images/phongtro.png"
+            });
+
+            $scope.apartmentsRent = apartmentsRent;
+        });
+
+
+        app.controller("room4Mates", function($scope) {
+           var roomMates = [];
+            roomMates.push({
+                title:"Cần 1 nam ở ghép hẻm 149 Trần Thi Lý",
+                acreage:"50",
+                area:"Ngũ Hành Sơn",
+                piece:"3",
+                dateUp:new Date('7/24/2016'),
+                imgUrl:"Images/phongtro.png"
+            });
+            roomMates.push({
+                title:"Tìm 1 nữ ở ghép nhà nguyên căn Lê Đình Lý",
+                acreage:"70",
+                area:"Hải Châu",
+                piece:"1.5",
+                dateUp:new Date('7/25/2016'),
+                imgUrl:"Images/phongtro.png"
+            });
+            roomMates.push({
+                title:"Tìm nam ở ghép đường Nguyễn Văn Thoại",
+                acreage:"20",
+                area:"Sơn Trà",
+                piece:"0.9",
+                dateUp:new Date('7/24/2016'),
+                imgUrl:"Images/phongtro.png"
+            });
+
+            $scope.roomMates = roomMates;
+        });
+
+        app.controller("myNews", function($scope) {
+            var news = [];
+            news.push({
+                title:"Căn hộ chung cư đẹp hút hồn nhờ ban công trồng đầy hoa",
+                describe:"Tận dụng khoảng không gian nhỏ hẹp ở ban công, rất nhiều gia đình sống ở những căn hộ chung cư đã vô cùng khéo léo tạo nên những khu vườn ngát hương hoa trên ban công nhỏ.",
+                imgUrl:"Images/news.png"
+            });
+            news.push({
+                title:"Khó như tìm mua nhà 1 tỷ đồng",
+                describe:"Sự tụt giảm mạnh của phân khúc căn hộ bình dân trên thị trường cũng là điều dễ hiểu khi mà lượng dự án được chào bán đang ngày càng ít ỏi.",
+                imgUrl:"Images/news.png"
+            });
+            news.push({
+                title:"Nhà phố xây sẵn giá rẻ ngoại ô Sài Gòn hút khách",
+                describe:"Với diện tích siêu hạn hẹp, chỉ khoảng 3m2 nhưng những ban công này vẫn trở thành góc đọc sách, thư giãn hay thậm chí là bàn ăn ngoài trời siêu đẹp.",
+                imgUrl:"Images/news.png"
+            });
+            news.push({
+                title:"Trang trí ban công 3m2 đẹp bất ngờ",
+                describe:"Tận dụng khoảng không gian nhỏ hẹp ở ban công, rất nhiều gia đình sống ở những căn hộ chung cư đã vô cùng khéo léo tạo nên những khu vườn ngát hương hoa trên ban công nhỏ.",
+                imgUrl:"Images/news.png"
+            });
+            news.push({
+                title:"Thiết kế nhà đẹp trong khoảng 300 triệu",
+                describe:"Nhờ giải pháp thiết kế kiến trúc và nội thất thông minh, dù diện tích khá nhỏ nhưng ngôi nhà vẫn đẹp và mang phong cách khác hiện đại",
+                imgUrl:"Images/news.png"
+            });
+
+            $scope.news = news;
+        });
+    </script>
+</body>
+</html>

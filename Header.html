@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Header</title>
+</head>
+<body>
+    <div class="container">
+        <div style="margin: 11px 0 11px 0">
+            <div id="title" class="pull-left">
+                <h1 style="font-family: 'Roboto', serif; color: #ff0000; font-size: 60px; margin: 0">LOGO</h1>
+            </div>
+
+            <div id="user">
+                <ul class="pull-right" style="margin: 8px 0 8px 3px">
+                    <li><a href="#" id="signIn">Đăng nhập</a></li>
+                    <li><a href="#" id="signUp">Đăng ký</a></li>
+                </ul> <!-- end login -->
+
+                <div class="pull-right" style="margin: 8px 0">
+                    <button class="btn pull-rit" id="btnPost">ĐĂNG TIN</button>
+                </div> <!-- end btn-post -->
+            </div>
+        </div>
+
+    </div>
+    <nav id="navigation" class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle btn btn-primary" data-toggle="collapse" data-target="#myNav">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="myNav">
+                <ul class="nav navbar-nav">
+                    <li class="activee"><a href="#"><i class="fa fa-home" style="font-size: 30px"></i></a></li>
+                    <li><a href="#">Cho thuê phòng trọ</a></li>
+                    <li><a href="#">Cho thuê nhà nguyên căn</a></li>
+                    <li><a href="#">Cho thuê căn hộ chung cư</a></li>
+                    <li><a href="#">Cần tìm người ở ghép</a></li>
+                    <li><a href="#">Tin tức</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav> <!-- end navigation -->
+
+    <div id="parallax" ng-controller="myController">
+        <div class="container">
+            <div id="wrap-search">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <input type="search" role="search" id="inp-search" placeholder="Nhập nội dung cần tìm" ng-model="searchText"/>
+                    </div>
+                    <div class="col-sm-12">
+                        <select class="selectOption">
+                            <option>Loại tin</option>
+                            <option>Cho thuê phòng trọ</option>
+                            <option>Cho thuê nhà nguyên căn</option>
+                            <option>Cho thuê căn hộ chung cư</option>
+                            <option>Cần tìm người ở ghép</option>
+                        </select> <!-- end Loai Tin -->
+                        <select class="selectOption">
+                            <option>Quận/huyện</option>
+                            <option>Quận Hải Châu</option>
+                            <option>Quận Thanh Khê</option>
+                            <option>Quận Sơn Trà</option>
+                            <option>Quận Liên Chiểu</option>
+                            <option>Quận Ngũ Hành Sơn</option>
+                            <option>Quận Cẩm Lệ</option>
+                        </select> <!-- ebd Quan/huyen -->
+                        <select class="selectOption">
+                            <option>Giá</option>
+                            <option> 500.000 - 1 triệu </option>
+                            <option>1 triệu - 1,5 triệu</option>
+                            <option> > 1,5 triệu</option>
+                        </select> <!-- ebd gia -->
+                        <button class="btn" id="btnSearch">
+                            <i class="fa fa-search"></i> TÌM
+                        </button> <!-- end search button -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  <!-- end parallax -->
+<!------------------- END HEADER ---------------------------->
+</body>
+</html>

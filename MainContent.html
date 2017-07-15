@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+    <article ng-controller="room4Rent">
+        <div  class="bluLine">
+            <h2 class="tag">Cho thuê phòng trọ</h2>
+        </div> <!-- end tag -->
+        <div class="post" ng-repeat="motelRoom in motelRooms | orderBy:'dateUp':true">
+            <div class="postImg">
+                <img ng-src="{{motelRoom.imgUrl}}" alt="phong-tro" class="img-responsive"/>
+            </div>
+            <div class="postInfo">
+                <a href="#"><h3>{{motelRoom.title}}</h3></a>
+                <span>Diện tích: <strong>{{motelRoom.acreage}}m<sup>2</sup></strong></span> <br/>
+                <span>Khu vực: <a href="#"><strong>{{motelRoom.area}}</strong></a></span> <br/>
+                <span class="piece">Giá: <strong>{{motelRoom.piece}} triệu/tháng</strong></span> <br/>
+                <span class="pull-right">{{motelRoom.dateUp | date:'dd/MM/yyyy'}}</span>
+            </div>
+        </div>
+
+        <a href="#" class="viewMore">Xem thêm &raquo;</a> <!-- end view more -->
+        <div style="clear: right;"></div>
+    </article> <!---------- end cho thue phong tro --------->
+
+
+    <article ng-controller="house4Rent">
+        <div class="bluLine">
+            <h2 class="tag">Cho thuê nhà nguyên căn</h2>
+        </div> <!-- end tag -->
+
+        <div class="post" ng-repeat="houseRent in housesRent | orderBy:'dateUp':true">
+            <div class="postImg">
+                <img ng-src="{{houseRent.imgUrl}}" alt="phong-tro" class="img-responsive"/>
+            </div>
+            <div class="postInfo">
+                <a href="#"><h3>{{houseRent.title}}</h3></a>
+                <span>Diện tích: <strong>{{houseRent.acreage}}m<sup>2</sup></strong></span> <br/>
+                <span>Khu vực: <a href="#"><strong>{{houseRent.area}}</strong></a></span> <br/>
+                <span class="piece">Giá: <strong>{{houseRent.piece}} triệu/tháng</strong></span> <br/>
+                <span class="pull-right">{{houseRent.dateUp | date:'dd/MM/yyyy'}}</span>
+            </div>
+        </div> <!-- end post content 2 -->
+
+        <a href="#" class="viewMore">Xem thêm &raquo;</a> <!-- end view more -->
+        <div style="clear: right;"></div>
+    </article> <!---------- end cho thue nha nguyen can --------->
+
+
+    <article ng-controller="apartment4Rent">
+        <div class="bluLine">
+            <h2 class="tag">Cho thuê căn hộ chung cư</h2>
+        </div> <!-- end tag -->
+
+        <div class="post" ng-repeat="apartmentRent in apartmentsRent | orderBy:'dateUp':true">
+            <div class="postImg">
+                <img ng-src="{{apartmentRent.imgUrl}}" alt="phong-tro" class="img-responsive"/>
+            </div>
+            <div class="postInfo">
+                <a href="#"><h3>{{apartmentRent.title}}</h3></a>
+                <span>Diện tích: <strong>{{apartmentRent.acreage}}m<sup>2</sup></strong></span> <br/>
+                <span>Khu vực: <a href="#"><strong>{{apartmentRent.area}}</strong></a></span> <br/>
+                <span class="piece">Giá: <strong>{{apartmentRent.piece}} triệu/tháng</strong></span> <br/>
+                <span style="float: right">{{apartmentRent.dateUp | date:'dd/MM/yyyy'}}</span>
+            </div>
+        </div> <!-- end post content 3 -->
+
+        <a href="#" class="viewMore">Xem thêm &raquo;</a> <!-- end view more -->
+        <div style="clear: right;"></div>
+    </article> <!---------- end cho thue can ho chung cu --------->
+
+
+    <article ng-controller="room4Mates">
+        <div class="bluLine">
+            <h2 class="tag">Tìm người ở ghép</h2>
+        </div> <!-- end tag -->
+
+        <div class="post" ng-repeat="roomMate in roomMates | orderBy:'dateUp':true">
+            <div class="postImg">
+                <img ng-src="{{roomMate.imgUrl}}" alt="phong-tro" class="img-responsive"/>
+            </div>
+            <div class="postInfo">
+                <a href="#"><h3>{{roomMate.title}}</h3></a>
+                <span>Diện tích: <strong>{{roomMate.acreage}}m<sup>2</sup></strong></span> <br/>
+                <span>Khu vực: <a href="#"><strong>{{roomMate.area}}</strong></a></span> <br/>
+                <span class="piece">Giá: <strong>{{roomMate.piece}} triệu/tháng</strong></span> <br/>
+                <span class="pull-right">{{roomMate.dateUp | date:'dd/MM/yyyy'}}</span>
+            </div>
+        </div>
+
+        <a href="#" class="viewMore">Xem thêm &raquo;</a> <!-- end view more -->
+        <div style="clear: right;"></div>
+    </article>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+        <div class="ads">
+        <img src="Images/ads.png" alt="ads"/>
+    </div>
+    <div class="ads">
+        <img src="Images/ads.png" alt="ads"/>
+    </div>
+
+    <div class="placeRent">
+        <div class="asideTag">
+            <h2>ĐỊA ĐIỂM CHO THUÊ</h2>
+        </div>
+        <div class="place">
+            <a href="#">Cho thuê tại quận Hải Châu</a>
+            <a href="#">Cho thuê tại quận Thanh Khê</a>
+            <a href="#">Cho thuê tại quận Sơn Trà</a>
+            <a href="#">Cho thuê tại quận Liên Chiểu</a>
+            <a href="#">Cho thuê tại quận Ngũ Hành Sơn</a>
+            <a href="#" style="border-bottom: none">Cho thuê tại quận Cẩm Lệ</a>
+        </div>
+    </div>
+
+    <div class="news" ng-controller="myNews">
+        <div class="asideTag">
+            <h2>TIN TỨC</h2>
+        </div>
+        <div class="newsContent">
+            <div style="padding-top: 10px; padding-left: 10px">
+                <div class="content" ng-repeat="newsContent in news">
+                    <div class="newsImg">
+                        <img ng-src="{{newsContent.imgUrl}}" alt="news" class="img-responsive"/>
+                    </div>
+                    <div class="newsItem">
+                        <a href="#"><h3>{{newsContent.title}}</h3></a>
+                        <p>{{newsContent.describe}}</p>
+                    </div>
+                </div>
+            </div> <!-- end content of news -->
+        </div>
+    </div> <!---- end news --->
+
+    <div class="fb-page" data-href="https://www.facebook.com/ChoCover.net/ee" data-tabs="timeline" data-width="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/ChoCover.net/ee" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/ChoCover.net/ee">Chợ Cover</a></blockquote></div>
+
+</body>
+</html>
